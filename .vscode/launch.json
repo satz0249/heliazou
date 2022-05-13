@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "zou.app",
+                "FLASK_DEBUG": "1",
+                "PREVIEW_FOLDER": "${fileDirname}/../previews",
+                "DEBUG": "1",
+                "MAIL_DEBUG": "1",
+            },
+            "args": [
+                "run",
+                "--no-reload",
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "env": {"PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}"},
+            "justMyCode": false
+        }
+    ]
+}

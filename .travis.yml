@@ -1,0 +1,22 @@
+language: python
+dist: bionic
+sudo: required
+python:
+  - "3.6"
+  - "3.8"
+  - "3.9"
+services:
+  - postgresql
+addons:
+  postgresql: "9.4"
+  apt:
+    packages: 
+      - ffmpeg
+install: 
+  - "pip install -r requirements.txt"
+before_script:
+  - psql -c 'create database zoudb;' -U postgres
+  - mkdir /home/travis/build/cgwire/zou/previews
+env:
+  - DEBUG=1 MAIL_DEBUG=1 FLASK_APP=zou.app PREVIEW_FOLDER=/home/travis/build/cgwire/zou/previews
+script: py.test

@@ -1,0 +1,18 @@
+[
+  {
+    "email": "johndoe@gmail.com",
+    "firstname": "John",
+    "lastname": "Doe",
+    "id": 1,
+    "login": "john.doe",
+    "type": "HumanUser"
+  },
+  {
+    "email": "ema.peel@gmail.com",
+    "firstname": "Ema",
+    "lastname": "Peel",
+    "id": 2,
+    "login": "ema.peel",
+    "type": "HumanUser"
+  }
+]
